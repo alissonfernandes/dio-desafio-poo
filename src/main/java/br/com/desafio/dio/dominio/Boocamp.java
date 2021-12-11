@@ -9,6 +9,7 @@ import java.util.Set;
 public class Boocamp {
 
     private String nome;
+    private String descricao;
     private final LocalDate dataInicio ;
     private final LocalDate dataFinal;
     private Set<Dev> devsInscritos;
@@ -27,6 +28,14 @@ public class Boocamp {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public LocalDate getDataInicio() {
@@ -58,11 +67,11 @@ public class Boocamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Boocamp boocamp = (Boocamp) o;
-        return Objects.equals(nome, boocamp.nome) && Objects.equals(dataInicio, boocamp.dataInicio) && Objects.equals(dataFinal, boocamp.dataFinal) && Objects.equals(devsInscritos, boocamp.devsInscritos) && Objects.equals(conteudos, boocamp.conteudos);
+        return Objects.equals(nome, boocamp.nome) && Objects.equals(descricao, boocamp.descricao) && Objects.equals(dataInicio, boocamp.dataInicio) && Objects.equals(dataFinal, boocamp.dataFinal) && Objects.equals(devsInscritos, boocamp.devsInscritos) && Objects.equals(conteudos, boocamp.conteudos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, dataInicio, dataFinal, devsInscritos, conteudos);
+        return Objects.hash(nome, descricao, dataInicio, dataFinal, devsInscritos, conteudos);
     }
 }
